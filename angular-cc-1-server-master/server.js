@@ -7,7 +7,7 @@ const port = 3000;
 
 // Cors configuration - Allows requests from localhost:4200
 const corsOptions = {
-  origin: "http://localhost:4200",
+  origin: "https://e-commerce-mean-front-end.onrender.com/",
   optionsSuccessStatus: 204,
   methods: "GET, POST, PUT, DELETE",
 };
