@@ -86,7 +86,7 @@ export class HomeComponent {
 
   fetchProducts(page: number, perPage: number) {
     this.productsService
-      .getProducts('http://localhost:3000/clothes', { page, perPage })
+      .getProducts('https://e-commerce-mean.onrender.com/clothes', { page, perPage })
       .subscribe({
         next: (data: Products) => {
           this.products = data.items;
@@ -100,7 +100,7 @@ export class HomeComponent {
 
   editProduct(product: Product, id: number) {
     this.productsService
-      .editProduct(`http://localhost:3000/clothes/${id}`, product)
+      .editProduct(`https://e-commerce-mean.onrender.com/clothes/${id}`, product)
       .subscribe({
         next: (data) => {
           console.log(data);
@@ -115,7 +115,7 @@ export class HomeComponent {
 
   deleteProduct(id: number) {
     this.productsService
-      .deleteProduct(`http://localhost:3000/clothes/${id}`)
+      .deleteProduct(`https://e-commerce-mean.onrender.com/clothes/${id}`)
       .subscribe({
         next: (data) => {
           console.log(data);
@@ -130,7 +130,7 @@ export class HomeComponent {
 
   addProduct(product: Product) {
     this.productsService
-      .addProduct(`http://localhost:3000/clothes`, product)
+      .addProduct(`https://e-commerce-mean.onrender.com/clothes`, product)
       .subscribe({
         next: (data) => {
           console.log(data);
